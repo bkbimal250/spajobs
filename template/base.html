@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+
+<style>
+      .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 1000;
+        }
+        
+        .whatsapp-float img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .whatsapp-float img:hover {
+            transform: scale(1.1);
+            text:"apply job by whatsaap";
+        }
+        
+
+
+</style>
+      {% include 'head.html' %}
+
+      <body id="top">
+            {% include 'header.html' %}
+            {% block content %}{% endblock %}
+            {% include 'footer.html' %}
+            {% include 'scripts.html' %} 
+            {% block extra_scripts %} {% endblock %}
+
+            <a href="https://wa.me/+917718870811?text=Hello!%20I'm%20looking%20for%20a%20job.%20Can%20you%20guide%20me%20on%20available%20opportunities?" title="Apply through whatsApp" target="_blank" 
+            class="fixed top-1/2 right-4 transform -translate-y-1/2 z-50 bg-green-500 p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                  alt="WhatsApp" 
+                  class="w-10 h-10">
+         </a>
+         
+      </body>
+</html>
